@@ -1,0 +1,67 @@
+using System;
+
+namespace Summer_Outfit
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int temp = int.Parse(Console.ReadLine());
+            string dayTime = Console.ReadLine();
+            string Outfit, Shoes;
+
+            if (10 <= temp && temp <= 18)
+            {
+                if (dayTime == "Morning")
+                {
+
+                    Outfit = "Sweatshirt";
+                    Shoes = "Sneakers";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+                else if (dayTime == "Afternoon" || dayTime == "Evening")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+            }
+            else if ( temp <= 24)
+            {
+                if (dayTime == "Morning" || dayTime == "Evening")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+                else if (dayTime == "Afternoon")
+                {
+                    Outfit = "T-Shirt";
+                    Shoes = "Sandals";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+            }
+            else if (temp >= 25)
+            {
+                if (dayTime == "Morning")
+                {
+                    Outfit = "T-Shirt";
+                    Shoes = "Sandals";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+                else if (dayTime == "Afternoon")
+                {
+                    Outfit = "Swim Suit";
+                    Shoes = "Barefoot";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+                else if (dayTime == "Evening")
+                {
+                    Outfit = "Shirt";
+                    Shoes = "Moccasins";
+                    Console.WriteLine($"It's {temp} degrees, get your {Outfit} and {Shoes}.");
+                }
+            }
+        }
+    }
+}
