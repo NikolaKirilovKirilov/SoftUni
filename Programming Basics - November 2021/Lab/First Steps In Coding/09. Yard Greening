@@ -1,0 +1,16 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double SqrMeters = double.Parse(Console.ReadLine());
+            double PrForSqr = SqrMeters * 7.61;
+            double PrDisc = 0.18 * PrForSqr;
+            Console.WriteLine($"The final price is: {PrForSqr - PrDisc} lv.");
+            Console.WriteLine($"The discount is: {PrDisc} lv.");
+        }
+    }
+}
