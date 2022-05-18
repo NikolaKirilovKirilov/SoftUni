@@ -1,0 +1,50 @@
+using System;
+
+namespace Hotel_Room
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string month = Console.ReadLine();
+            int stay = int.Parse(Console.ReadLine());
+            double prcStud = 0, prcApt = 0;
+
+            if (month == "May" || month == "October")
+            {
+                prcStud = 50;
+                prcApt = 65;
+                if (stay > 7 && stay <= 14)
+                {
+                    prcStud *= .95;
+                }
+                else if (stay > 14)
+                {
+                    prcStud *= .7;
+                    prcApt *= .9;
+                }
+            }
+            else if (month == "June" || month == "September")
+            {
+                prcStud = 75.2;
+                prcApt = 68.7;
+                if (stay > 14)
+                {
+                    prcStud *= .8;
+                    prcApt *= .9;
+                }
+            }
+            else if (month == "July" || month == "August")
+            {
+                prcStud = 76;
+                prcApt = 77;
+                if (stay > 14)
+                {
+                    prcApt *= .9;
+                }
+            }
+            Console.WriteLine($"Apartment: {prcApt*stay:f2} lv.");
+            Console.WriteLine($"Studio: {prcStud*stay:f2} lv.");
+        }
+    }
+}
