@@ -1,0 +1,104 @@
+using System;
+
+namespace Fishing_Boat
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            string season = Console.ReadLine();
+            int fishermen = int.Parse(Console.ReadLine());
+            double rent = 0;
+
+            if (season == "Spring")
+            {
+                rent = 3000;
+                if (fishermen <= 6)
+                {
+                    rent *= .9;
+                    if (fishermen % 2 == 0)
+                    {
+                        rent *= .95;
+                    }
+                }
+                else if (fishermen <= 11)
+                {
+                    rent *= .85;
+                    if (fishermen % 2 == 0)
+                    {
+                        rent *= .95;
+                    }
+                }
+                else if (fishermen >= 12)
+                {
+                    rent *= .75;
+                    if (fishermen % 2 == 0)
+                    {
+                        rent *= .95;
+                    }
+                }
+            }
+            else if (season == "Summer" || season == "Autumn")
+            {
+                rent = 4200;
+                if (fishermen <= 6)
+                {
+                    rent *= .9;
+                    if (fishermen % 2 == 0 && season != "Autumn")
+                    {
+                        rent *= .95;
+                    }
+                }
+                else if (fishermen <= 11)
+                {
+                    rent *= .85;
+                    if (fishermen % 2 == 0 && season != "Autumn")
+                    {
+                        rent *= .95;
+                    }
+                }
+                else if (fishermen >= 12)
+                {
+                    rent *= .75;
+                    if (fishermen % 2 == 0 && season != "Autumn")
+                    {
+                        rent *= .95;
+                    }
+                }
+            }
+            else if (season == "Winter")
+            {
+                rent = 2600;
+                if (fishermen <= 6)
+                {
+                    rent *= .9;
+                    if (fishermen % 2 == 0)
+                    {
+                        rent *= .95;
+                    }
+                }
+                else if (fishermen <= 11)
+                {
+                    rent *= .85;
+                    if (fishermen % 2 == 0)
+                    {
+                        rent *= .95;
+                    }
+                }
+                else if (fishermen >= 12)
+                {
+                    rent *= .75;
+                    if (fishermen % 2 == 0)
+                    {
+                        rent *= .95;
+                    }
+                }
+            }
+            if (budget >= rent)
+            Console.WriteLine($"Yes! You have {budget-rent:f2} leva left.");
+            else
+            Console.WriteLine($"Not enough money! You need {rent-budget:f2} leva.");
+        }
+    }
+}
