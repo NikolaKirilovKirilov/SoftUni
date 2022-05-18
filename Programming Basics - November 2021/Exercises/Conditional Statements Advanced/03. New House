@@ -1,0 +1,116 @@
+using System;
+
+namespace New_House
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string flrType = Console.ReadLine();
+            double Flrs = int.Parse(Console.ReadLine());
+            double Budget = double.Parse(Console.ReadLine());
+            double Total = 0;
+
+            if (flrType == "Roses")
+            {
+                if (Flrs > 80)
+                {
+                    Total = Flrs * 5 * .9;
+                }
+                else
+                {
+                    Total = Flrs * 5;
+                }
+
+                if (Budget >= Total)
+                {
+                    Console.WriteLine($"Hey, you have a great garden with {Flrs} {flrType} and {Budget - Total:f2} leva left.");
+                }
+                else
+                {
+                    Console.WriteLine($"Not enough money, you need {Total - Budget:f2} leva more.");
+                }
+            }
+            else if (flrType == "Dahlias")
+            {
+                if (Flrs > 90)
+                {
+                    Total = Flrs * 3.8 * .85;
+                }
+                else
+                {
+                    Total = Flrs * 3.8;
+                }
+
+                if (Budget >= Total)
+                {
+                    Console.WriteLine($"Hey, you have a great garden with {Flrs} {flrType} and {Budget - Total:f2} leva left.");
+                }
+                else
+                {
+                    Console.WriteLine($"Not enough money, you need {Total - Budget:f2} leva more.");
+                }
+            }
+            else if (flrType == "Tulips")
+            {
+                if (Flrs > 80)
+                {
+                    Total = Flrs * 2.8 * .85;
+                }
+                else
+                {
+                    Total = Flrs * 2.8;
+                }
+
+                if (Budget >= Total)
+                {
+                    Console.WriteLine($"Hey, you have a great garden with {Flrs} {flrType} and {Budget - Total:f2} leva left.");
+                }
+                else
+                {
+                    Console.WriteLine($"Not enough money, you need {Total - Budget:f2} leva more.");
+                }
+            }
+            else if (flrType == "Narcissus")
+            {
+                if (Flrs < 120)
+                {
+                    Total = Flrs * 3 * 1.15;
+                }
+                else
+                {
+                    Total = Flrs * 3;
+                }
+
+                if (Budget >= Total)
+                {
+                    Console.WriteLine($"Hey, you have a great garden with {Flrs} {flrType} and {Budget - Total:f2} leva left.");
+                }
+                else
+                {
+                    Console.WriteLine($"Not enough money, you need {Total - Budget:f2} leva more.");
+                }
+            }
+            else if (flrType == "Gladiolus")
+            {
+                if (Flrs < 80)
+                {
+                    Total = Flrs * 2.5 * 1.2;
+                }
+                else
+                {
+                    Total = Flrs * 2.5;
+                }
+
+                if (Budget >= Total)
+                {
+                    Console.WriteLine($"Hey, you have a great garden with {Flrs} {flrType} and {Budget - Total:f2} leva left.");
+                }
+                else
+                {
+                    Console.WriteLine($"Not enough money, you need {Total - Budget:f2} leva more.");
+                }
+            }
+        }
+    }
+}
