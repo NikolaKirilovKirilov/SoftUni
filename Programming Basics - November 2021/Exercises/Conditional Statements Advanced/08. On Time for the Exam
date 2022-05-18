@@ -1,0 +1,86 @@
+using System;
+
+namespace On_time_for_exam
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int exHor = int.Parse(Console.ReadLine());
+            int exMin = int.Parse(Console.ReadLine());
+            int arHor = int.Parse(Console.ReadLine());
+            int arMin = int.Parse(Console.ReadLine());
+
+            int exMinSum = 0;
+            int arMinSum = 0;
+            int differance = 0;
+            int addZero = 0;
+
+            exMinSum = exHor * 60 + exMin;
+            arMinSum = arHor * 60 + arMin;
+            differance = exMinSum - arMinSum;
+            addZero = Math.Abs(differance%60);
+
+            if(differance >=0 && differance <=30)
+            {
+                Console.WriteLine("On time");
+                if (differance !=0)
+                {
+                    if ((Math.Abs(differance)/60) < 1)
+                    {
+                        Console.WriteLine($"{Math.Abs(differance)} minutes before the start");
+                    }
+                    else
+                    {
+                        if (addZero < 10)
+                        {
+                            Console.WriteLine($"{Math.Abs(differance)/60}:0{Math.Abs(differance)%60} hours before the start");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{Math.Abs(differance)/60}:{Math.Abs(differance)%60} hours before the start");
+                        }
+                    }
+                }
+            }
+            else if (differance >30)
+            {
+                Console.WriteLine("Early");
+                if ((Math.Abs(differance)/60)<1)
+                {
+                    Console.WriteLine($"{Math.Abs(differance)} minutes before the start");
+                }
+                else
+                {
+                    if (addZero < 10)
+                    {
+                        Console.WriteLine($"{Math.Abs(differance) / 60}:0{Math.Abs(differance) % 60} hours before the start");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{Math.Abs(differance) / 60}:{Math.Abs(differance) % 60} hours before the start");
+                    }
+                }
+            }
+            else if (differance < 0)
+            {
+                Console.WriteLine("Late");
+                if (Math.Abs(differance)/60 <1)
+                {
+                    Console.WriteLine($"{Math.Abs(differance)} minutes after the start");
+                }
+                else
+                {
+                    if (addZero < 10)
+                    {
+                        Console.WriteLine($"{Math.Abs(differance) / 60}:0{Math.Abs(differance) % 60} hours after the start");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{Math.Abs(differance) / 60}:{Math.Abs(differance) % 60} hours after the start");
+                    }
+                }
+            }
+        }
+    }
+}
