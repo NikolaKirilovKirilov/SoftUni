@@ -1,0 +1,79 @@
+using System;
+
+namespace Number_in_Range
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int hour = int.Parse(Console.ReadLine());
+            string day = Console.ReadLine();
+            switch (day)
+            {
+                case "Monday":
+                    if (hour <= 18 && hour >= 10)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                case "Tuesday":
+                    if (hour <= 18 && hour >= 10)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                case "Wednesday":
+                    if (hour <= 18 && hour >= 10)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                case "Thursday":
+                    if (hour <= 18 && hour >= 10)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                case "Friday":
+                    if (hour <= 18 && hour >= 10)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                case "Saturday":
+                    if (hour <= 18 && hour >= 10)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                case "Sunday":
+                    Console.WriteLine("closed");
+                    break;
+            }
+        }
+    }
+}
