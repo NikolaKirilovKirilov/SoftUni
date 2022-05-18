@@ -1,0 +1,22 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ReqNailon = int.Parse(Console.ReadLine());
+            int ReqPaint = int.Parse(Console.ReadLine());
+            int ReqSepar = int.Parse(Console.ReadLine());
+            int Hours = int.Parse(Console.ReadLine());
+            double NailonSum = (ReqNailon + 2 ) * 1.50;
+            double PaintSum = (ReqPaint + (ReqPaint * 0.1)) *14.50;
+            double SeparSum = ReqSepar *5;
+            double MaterialSum = NailonSum + PaintSum + SeparSum + 0.40;
+            double WorkChrg = (MaterialSum * 0.3)*Hours;
+            double Total = MaterialSum + WorkChrg;
+            Console.WriteLine(Total);
+        }
+    }
+}
