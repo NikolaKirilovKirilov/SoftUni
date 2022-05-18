@@ -1,0 +1,53 @@
+using System;
+
+namespace Conditional_statments_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double HolidayPrice = double.Parse(Console.ReadLine());
+            int Puzzles = int.Parse(Console.ReadLine());
+            int TalkinDolls = int.Parse(Console.ReadLine());
+            int TeddyBears = int.Parse(Console.ReadLine());
+            int Minions = int.Parse(Console.ReadLine());
+            int Trucks = int.Parse(Console.ReadLine());
+
+            double Sum = Puzzles * 2.60 + TalkinDolls * 3 + TeddyBears * 4.10 + Minions * 8.20 + Trucks * 2 ;
+
+            int BoughtQuanity = Puzzles + TalkinDolls + TeddyBears + Minions + Trucks;
+            if(BoughtQuanity >= 50)
+            {
+                double Discount = Sum * 0.25;
+                double AftrDisc = Sum - Discount;
+                double ElctricBill = AftrDisc * 0.1;
+                double Total = AftrDisc - ElctricBill;
+                if (Total < HolidayPrice)
+                {
+                    double NeededMoney = HolidayPrice - Total;
+                    Console.WriteLine($"Not enough money! {NeededMoney:f2} lv needed.");
+                }
+                else
+                {
+                    double MoneyLeft = Total - HolidayPrice;
+                    Console.WriteLine($"Yes! {MoneyLeft:f2} lv left.");
+                }
+            }
+            else
+            {
+                double ElectricBill = Sum * 0.1;
+                double Total = Sum - ElectricBill;
+                if (Total < HolidayPrice)
+                {
+                    double NeededMoney = HolidayPrice - Total;
+                    Console.WriteLine($"Not enough money! {NeededMoney:f2} lv needed.");
+                }
+                else
+                {
+                    double MoneyLeft = Total - HolidayPrice;
+                    Console.WriteLine($"Yes! {MoneyLeft:f2} lv left.");
+                }
+            }
+        }   
+    }
+}
