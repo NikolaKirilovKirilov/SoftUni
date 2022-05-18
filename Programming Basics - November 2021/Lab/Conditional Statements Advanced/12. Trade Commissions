@@ -1,0 +1,102 @@
+using System;
+
+namespace Trade_Comissions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string city = Console.ReadLine();
+            double earnings = double.Parse(Console.ReadLine());
+
+            if (city != "Sofia" && city != "Varna" && city != "Plovdiv")
+            {
+                Console.WriteLine("error");
+            }
+            else
+            {
+                switch (city)
+                {
+                    case "Sofia":
+                        if (earnings < 0)
+                        {
+                            Console.WriteLine("error");
+                        }
+                        else if (0 <= earnings && earnings <= 500)
+                        {
+                            earnings *= .05;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (500 < earnings && earnings <= 1000)
+                        {
+                            earnings *= .07;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (1000 < earnings && earnings <= 10000)
+                        {
+                            earnings *= .08;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (10000 < earnings)
+                        {
+                            earnings *= .12;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        break;
+                    case "Varna":
+                        if (earnings < 0)
+                        {
+                            Console.WriteLine("error");
+                        }
+                        else if (0 <= earnings && earnings <= 500)
+                        {
+                            earnings *= .045;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (500 < earnings && earnings <= 1000)
+                        {
+                            earnings *= .075;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (1000 < earnings && earnings <= 10000)
+                        {
+                            earnings *= .10;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (10000 < earnings)
+                        {
+                            earnings *= .13;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        break;
+                    case "Plovdiv":
+                        if (earnings < 0)
+                        {
+                            Console.WriteLine("error");
+                        }
+                        else if (0 <= earnings && earnings <= 500)
+                        {
+                            earnings *= .055;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (500 < earnings && earnings <= 1000)
+                        {
+                            earnings *= .08;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (1000 < earnings && earnings <= 10000)
+                        {
+                            earnings *= .12;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        else if (10000 < earnings)
+                        {
+                            earnings *= .145;
+                            Console.WriteLine($"{earnings:f2}");
+                        }
+                        break;
+                }
+            }
+        }
+    }
+}
