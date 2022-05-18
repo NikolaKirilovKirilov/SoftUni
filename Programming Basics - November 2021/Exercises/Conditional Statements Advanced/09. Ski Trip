@@ -1,0 +1,62 @@
+using System;
+
+namespace Ski_Trip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int stay = int.Parse(Console.ReadLine());
+            string room = Console.ReadLine();
+            string opinion = Console.ReadLine();
+
+            double stayPrc = 0.0;
+
+            if (room == "room for one person")
+            {
+                stayPrc = (stay - 1) * 18; 
+            }
+            else if (room == "apartment")
+            {
+                if (stay < 10)
+                {
+                    stayPrc = ((stay - 1) * 25) * .7;
+                }
+                else if (stay >= 10 && stay <=15)
+                {
+                    stayPrc = ((stay - 1) * 25) * .65;
+                }
+                else if (stay >15)
+                {
+                    stayPrc = ((stay - 1) * 25) * .5;
+                }
+            }
+            else if (room == "president apartment")
+            {
+                if (stay < 10)
+                {
+                    stayPrc = ((stay - 1) * 35) * .9;
+                }
+                else if (stay >= 10 && stay <= 15)
+                {
+                    stayPrc = ((stay - 1) * 35) * .85;
+                }
+                else if (stay > 15)
+                {
+                    stayPrc = ((stay - 1) * 35) * .8;
+                }
+            }
+
+            if (opinion == "positive")
+            {
+                stayPrc *= 1.25;
+            }
+            else if (opinion == "negative")
+            {
+                stayPrc *= .9;
+            }
+
+            Console.WriteLine($"{stayPrc:f2}");
+        }
+    }
+}
