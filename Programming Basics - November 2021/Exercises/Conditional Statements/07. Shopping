@@ -1,0 +1,39 @@
+using System;
+
+namespace Shopping
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Budget = double.Parse(Console.ReadLine());
+            int GPU = int.Parse(Console.ReadLine());
+            int CPU = int.Parse(Console.ReadLine());
+            int RAM = int.Parse(Console.ReadLine());
+
+            double GPUsum = GPU * 250;
+
+            double CPUPrice = GPUsum * 0.35;
+            double CPUSum = CPUPrice * CPU;
+
+            double RAMPrice = GPUsum * 0.1;
+            double RAMSum = RAMPrice * RAM;
+
+            double Total = GPUsum + CPUSum + RAMSum;
+
+            if (GPU > CPU)
+            {
+                Total = Total * 0.85;
+            }
+
+            if (Budget >= Total)
+            {
+                Console.WriteLine($"You have {(Budget - Total):f2} leva left!");
+            }
+            else
+            {
+                Console.WriteLine($"Not enough money! You need {(Total - Budget):f2} leva more!");
+            }
+        }
+    }
+}
