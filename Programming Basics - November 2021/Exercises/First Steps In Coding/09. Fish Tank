@@ -1,0 +1,22 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Lght = double.Parse(Console.ReadLine());
+            double Wdht = double.Parse(Console.ReadLine());
+            double Hght = double.Parse(Console.ReadLine());
+            double Pers = double.Parse(Console.ReadLine());
+
+            double TkVol = Lght * Wdht * Hght;
+            double TkVolNLtr = TkVol * 0.001;
+            double VolTkn = Pers / 100;
+
+            double ReqLiters = TkVolNLtr * (1 - VolTkn);
+            Console.WriteLine(ReqLiters);
+        }
+    }
+}
