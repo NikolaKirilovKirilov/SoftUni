@@ -1,0 +1,33 @@
+using System;
+
+namespace Световен_рекорд_по_плуване
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double RecSec = double.Parse(Console.ReadLine());
+            double RecMetrs = double.Parse(Console.ReadLine());
+            double Secsfr1Mtr = double.Parse(Console.ReadLine());
+
+            double Debuff = (Math.Floor(RecMetrs / 15)) * 12.5;
+            double TotalTime = RecMetrs * Secsfr1Mtr + Debuff;
+
+            if (RecSec<=TotalTime)
+            {
+                if (RecSec - TotalTime == 0)
+                {
+                    Console.WriteLine($"No, he failed! He was {(RecSec - TotalTime):f2} seconds slower.");
+                }
+                else
+                {
+                    Console.WriteLine($"No, he failed! He was {-1*(RecSec - TotalTime):f2} seconds slower.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Yes, he succeeded! The new world record is {TotalTime:f2} seconds.");
+            }
+        }
+    }
+}
