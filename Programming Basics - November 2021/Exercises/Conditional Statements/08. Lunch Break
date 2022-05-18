@@ -1,0 +1,29 @@
+using System;
+
+namespace Обедна_почивка
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string Series = Console.ReadLine();
+            double EpLenght = double.Parse(Console.ReadLine());
+            double RestLenght = double.Parse(Console.ReadLine());
+            double timeneeded = EpLenght;
+            timeneeded += RestLenght / 4;
+            timeneeded += RestLenght / 8;
+
+
+            if (RestLenght >= timeneeded)
+            {
+                double totalTimeLeft = Math.Ceiling(RestLenght - timeneeded);
+                Console.WriteLine($"You have enough time to watch {Series} and left with {totalTimeLeft} minutes free time.");
+            }
+            else
+            {
+                double totalTimeLeft = Math.Ceiling(timeneeded - RestLenght);
+                Console.WriteLine($"You don't have enough time to watch {Series}, you need {totalTimeLeft} more minutes.");
+            }
+        }
+    }
+}
