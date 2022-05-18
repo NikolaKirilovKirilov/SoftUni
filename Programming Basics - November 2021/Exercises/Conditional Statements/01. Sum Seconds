@@ -1,0 +1,25 @@
+using System;
+
+namespace Conditional_statments_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int FirstTime = int.Parse(Console.ReadLine());
+            int SecondTime = int.Parse(Console.ReadLine());
+            int ThirdTime = int.Parse(Console.ReadLine());
+            int TotalTime = FirstTime + SecondTime + ThirdTime;
+            int Minutes = TotalTime/60;
+            int Seconds = TotalTime % 60;
+            if (Seconds<10)
+            {
+                Console.WriteLine($"{Minutes}:0{Seconds}");
+            }
+            else
+            {
+                Console.WriteLine($"{Minutes}:{Seconds}");
+            }
+        }   
+    }
+}
