@@ -1,0 +1,16 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Deposit = double.Parse(Console.ReadLine());
+            double Months = double.Parse(Console.ReadLine());
+            double Percentage = double.Parse(Console.ReadLine());
+            double Sum = Deposit + Months * ((Deposit*(Percentage/100))/12);
+            Console.WriteLine(Sum);
+        }
+    }
+}
