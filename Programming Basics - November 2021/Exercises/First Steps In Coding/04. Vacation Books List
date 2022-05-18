@@ -1,0 +1,17 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int BkPgs = int.Parse(Console.ReadLine());
+            int PgsPrHr = int.Parse(Console.ReadLine());
+            int DedLn = int.Parse(Console.ReadLine());
+            int PgRdPrD = (BkPgs / PgsPrHr) / DedLn;
+
+            Console.WriteLine(PgRdPrD);
+        }
+    }
+}
