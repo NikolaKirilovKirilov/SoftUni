@@ -1,0 +1,14 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Dogfood = double.Parse(Console.ReadLine());
+            double Catfood = double.Parse(Console.ReadLine());
+            Console.WriteLine($"{(Dogfood*2.50)+(Catfood*4)} lv.");
+        }
+    }
+}
