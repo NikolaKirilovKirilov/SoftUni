@@ -1,0 +1,49 @@
+using System;
+
+namespace Годзила_срещу_Конг
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Budget = double.Parse(Console.ReadLine());
+            int Extras = int.Parse(Console.ReadLine());
+            double ClothesPrice = double.Parse(Console.ReadLine());
+            double Total;
+
+            double DecorPrc = Budget * .1;
+            double ClothesCost = Extras * ClothesPrice;
+
+            if (Extras > 150)
+            {
+                double Discount = ClothesCost * .1;
+                double AfterDisc = ClothesCost - Discount;
+                Total = Budget - AfterDisc - DecorPrc;
+                if (Total < 0)
+                {
+                    Console.WriteLine("Not enough money!");
+                    Console.WriteLine($"Wingard needs { -1 * Total:f2} leva more.");
+                }
+                else
+                {
+                    Console.WriteLine("Action!");
+                    Console.WriteLine($"Wingard starts filming with {Total:f2} leva left.");
+                }
+            }
+            else
+            {
+                Total = Budget - ClothesCost - DecorPrc;
+                if (Total < 0)
+                {
+                    Console.WriteLine("Not enough money!");
+                    Console.WriteLine($"Wingard needs { -1 * Total:f2} leva more.");
+                }
+                else
+                {
+                    Console.WriteLine("Action!");
+                    Console.WriteLine($"Wingard starts filming with {Total:f2} leva left.");
+                }
+            }
+        }
+    }
+}
