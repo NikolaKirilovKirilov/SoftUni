@@ -1,2 +1,2 @@
 # SoftUni
-Most exercises and exam problems that I encountered through the courses.
+Most exercises, lab and exam problems that I used as practis through the courses courses. (C#)
