@@ -1,0 +1,53 @@
+using System;
+
+namespace Journey
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            string season = Console.ReadLine();
+            string Location = "";
+            string stay = "";
+
+            if (budget <= 100)
+            {
+                Location = "Bulgaria";
+                if (season == "summer")
+                {
+                    stay = "Camp";
+                    budget *= .3;
+                }
+                else if (season == "winter")
+                {
+                    budget *= .7;
+                    stay = "Hotel";
+                }
+            }
+            else if (budget <= 1000)
+            {
+                Location = "Balkans";
+                if (season == "summer")
+                {
+                    stay = "Camp";
+                    budget *= .4;
+                }
+                else if (season == "winter")
+                {
+                    budget *= .8;
+                    stay = "Hotel";
+                }
+            }
+            else if (budget > 1000)
+            {
+                Location = "Europe";
+                stay = "Hotel";
+                budget *= .9;
+            }
+
+            Console.WriteLine($"Somewhere in {Location}");
+            Console.WriteLine($"{stay} - {budget:f2}");
+        }
+    }
+}
