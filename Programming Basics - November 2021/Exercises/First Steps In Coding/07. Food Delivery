@@ -1,0 +1,24 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ChikMen = int.Parse(Console.ReadLine());
+            int FishMen = int.Parse(Console.ReadLine());
+            int VegiMen = int.Parse(Console.ReadLine());
+
+            double ChikMenTotal = ChikMen * 10.35;
+            double FishMenTotal = FishMen * 12.40;
+            double VegiMenTotal = VegiMen * 8.15;
+
+            double MenTotal = ChikMenTotal + FishMenTotal + VegiMenTotal;
+            double DesertPrice = MenTotal * 0.2;
+            double WholeTotal = MenTotal + DesertPrice + 2.50;
+
+            Console.WriteLine(WholeTotal);
+        }
+    }
+}
