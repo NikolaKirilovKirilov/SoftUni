@@ -1,0 +1,19 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int PackPencils = int.Parse(Console.ReadLine());
+            int PackSharpies = int.Parse(Console.ReadLine());
+            int WtBrdCleaner = int.Parse(Console.ReadLine());
+            double DscPers = double.Parse(Console.ReadLine())/100;
+            double Sum = (PackPencils*5.80)+(PackSharpies*7.20)+(WtBrdCleaner*1.2);
+            double SumDsc = Sum *DscPers;
+            double EndPrice = Sum - SumDsc;
+            Console.WriteLine(EndPrice);
+        }
+    }
+}
