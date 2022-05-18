@@ -1,0 +1,19 @@
+using System;
+
+namespace Hello_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int PrcPrYr = int.Parse(Console.ReadLine());
+
+            double BaskSho = PrcPrYr - (PrcPrYr*0.4);
+            double BaskGr = BaskSho - (BaskSho * 0.2);
+            double BaskBll = BaskGr/4;
+            double BaskAcs = BaskBll/5;
+
+            Console.WriteLine(PrcPrYr + BaskSho + BaskGr + BaskBll + BaskAcs);
+        }
+    }
+}
