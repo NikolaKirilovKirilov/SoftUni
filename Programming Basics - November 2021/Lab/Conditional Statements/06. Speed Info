@@ -1,0 +1,32 @@
+using System;
+
+namespace Conditional_statments_SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double spd = double.Parse(Console.ReadLine());
+            if (spd <= 10)
+            {
+                Console.WriteLine("slow");
+            }
+            else if (spd <= 50)
+            {
+                Console.WriteLine("average");
+            }
+            else if (spd <= 150)
+            {
+                Console.WriteLine("fast");
+            }
+            else if (spd <= 1000)
+            {
+                Console.WriteLine("ultra fast");
+            }
+            else if (spd > 1000)
+            {
+                Console.WriteLine("extremely fast");
+            }
+        }   
+    }
+}
